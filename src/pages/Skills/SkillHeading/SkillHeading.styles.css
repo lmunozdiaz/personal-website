@@ -1,0 +1,17 @@
+.header-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.heading {
+  font-size: 2.4rem;
+  text-transform: capitalize;
+}
+
+.subheading {
+  font-style: italic;
+  font-weight: 200;
+  text-transform: capitalize;
+}

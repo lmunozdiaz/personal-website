@@ -1,0 +1,33 @@
+.skill-card {
+  background-color: #1a1a1a;
+  padding: 4rem;
+  border-radius: 1.5rem;
+}
+
+.skill-card__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.skill-card__art {
+  align-items: center;
+  background-color: #3b3b3b;
+  border-radius: 50px;
+  display: block;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+  max-height: 50px;
+  max-width: 50px;
+  padding: 1.2rem;
+}
+
+.skill-card__art .material-icons {
+  color: #f5f5f5;
+}
+
+.skill-card__description {
+  margin-top: 2rem;
+}

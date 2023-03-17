@@ -1,0 +1,27 @@
+.left-container {
+  position: fixed;
+  width: 50%;
+}
+
+.right-container {
+  margin-left: 50%;
+  padding: 0 6rem;
+  padding: 2rem 6rem 4rem 6rem;
+  width: 50%;
+}
+
+.nav {
+  background-color: #0d0d0d;
+  display: flex;
+  gap: 2rem;
+  justify-content: flex-start;
+  margin-bottom: 2rem;
+  padding: 2rem 0;
+  position: sticky;
+  top: 0;
+}
+
+.nav__link {
+  color: #7a7a7a;
+  text-transform: capitalize;
+}
