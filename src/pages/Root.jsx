@@ -1,10 +1,11 @@
-import "./Root.styles.css";
-import { Link, Outlet, useLocation } from "react-router-dom";
-import ProfilePage from "./Profile/ProfilePage";
-import SkillsPage from "./Skills/SkillsPage";
+import "./root.styles.jsx";
+import { Outlet, useLocation } from "react-router-dom";
+import Profile from "./profile/profile.component";
+import SkillCategoryListComponent from "./skills/skill-category-list.component.jsx";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import Styles from "./root.styles";
 
 export default function Root() {
   let location = useLocation();
@@ -15,26 +16,24 @@ export default function Root() {
 
   return (
     <>
-      <div className="left-container" data-aos="fade-right">
-        <ProfilePage />
-      </div>
-      <div className="right-container">
-        <nav className="nav">
-          <Link to={"skills"} className="nav__link">
-            skills
-          </Link>
-          <Link to={"projects"} className="nav__link">
-            projects
-          </Link>
-          <Link to={"experience"} className="nav__link">
-            work history
-          </Link>
-          <Link to={"education"} className="nav__link">
-            education
-          </Link>
-        </nav>
-        <main>{location.pathname === "/" ? <SkillsPage /> : <Outlet />}</main>
-      </div>
+      <Styles.LeftContainer data-aos="fade-right">
+        <Profile />
+      </Styles.LeftContainer>
+      <Styles.RightContainer>
+        <Styles.Nav>
+          <Styles.NavLink to={"skills"}>skills</Styles.NavLink>
+          <Styles.NavLink to={"projects"}>projects</Styles.NavLink>
+          <Styles.NavLink to={"work-history"}>work history</Styles.NavLink>
+          <Styles.NavLink to={"education"}>education</Styles.NavLink>
+        </Styles.Nav>
+        <main>
+          {location.pathname === "/" ? (
+            <SkillCategoryListComponent />
+          ) : (
+            <Outlet />
+          )}
+        </main>
+      </Styles.RightContainer>
     </>
   );
 }

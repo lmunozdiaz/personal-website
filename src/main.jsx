@@ -3,11 +3,11 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./reset.css";
 import "./index.css";
-import Root from "./pages/Root";
-import ProjectsPage from "./pages/Projects/ProjectsPage";
-import SkillsPage from "./pages/Skills/SkillsPage";
-import Education from "./pages/Education/EducationPage";
-import Experience from "./pages/Experience/ExperiencePage";
+import Root from "./pages/root";
+import SkillCategoryListComponent from "./pages/skills/skill-category-list.component";
+import ProjectListComponent from "./pages/projects/project-list.component";
+import SchoolListComponent from "./pages/education/school-list.component";
+import JobListComponent from "./pages/work-history/job-list.component";
 
 const router = createBrowserRouter([
   {
@@ -16,19 +16,19 @@ const router = createBrowserRouter([
     children: [
       {
         path: "skills",
-        element: <SkillsPage />,
+        element: <SkillCategoryListComponent />,
       },
       {
         path: "projects",
-        element: <ProjectsPage />,
+        element: <ProjectListComponent />,
       },
       {
-        path: "experience",
-        element: <Experience />,
+        path: "work-history",
+        element: <JobListComponent />,
       },
       {
         path: "education",
-        element: <Education />,
+        element: <SchoolListComponent />,
       },
     ],
   },
