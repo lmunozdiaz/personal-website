@@ -1,7 +1,7 @@
-import Job from "./job/job.component";
+import Job from "./Job/Job";
 import SeparatorComponent from "../../components/ui/separator.component";
 
-export default function JobListComponent() {
+export default function JobList() {
   const data = [
     {
       id: 1,
@@ -108,7 +108,7 @@ export default function JobListComponent() {
       {data.map((job) => {
         return (
           <>
-            <Job key={job.id} job={job} />
+            <Job job={job} />
             {job.id !== 3 ? <SeparatorComponent /> : null}
           </>
         );

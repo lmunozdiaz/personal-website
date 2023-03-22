@@ -1,13 +1,12 @@
-import "./root.styles.jsx";
 import { Outlet, useLocation } from "react-router-dom";
-import Profile from "./profile/profile.component";
-import SkillCategoryListComponent from "./skills/skill-category-list.component.jsx";
+import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { useEffect } from "react";
-import Styles from "./root.styles";
+import Styles from "./App.styles";
+import Profile from "./views/Profile/Profile";
+import SkillList from "./views/Skills/SkillList";
 
-export default function Root() {
+export default function App() {
   let location = useLocation();
 
   useEffect(() => {
@@ -26,13 +25,7 @@ export default function Root() {
           <Styles.NavLink to={"work-history"}>work history</Styles.NavLink>
           <Styles.NavLink to={"education"}>education</Styles.NavLink>
         </Styles.Nav>
-        <main>
-          {location.pathname === "/" ? (
-            <SkillCategoryListComponent />
-          ) : (
-            <Outlet />
-          )}
-        </main>
+        <main>{location.pathname === "/" ? <SkillList /> : <Outlet />}</main>
       </Styles.RightContainer>
     </>
   );

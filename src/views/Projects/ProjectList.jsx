@@ -1,7 +1,7 @@
-import ProjectComponent from "./project/project.component";
+import Project from "./Project/Project";
 import SeparatorComponent from "../../components/ui/separator.component";
 
-export default function ProjectListComponent() {
+export default function ProjectList() {
   const projects = [
     {
       id: 1,
@@ -29,7 +29,7 @@ export default function ProjectListComponent() {
       {projects.map((project) => {
         return (
           <>
-            <ProjectComponent key={project.id} project={project} />
+            <Project key={project.id} project={project} />
             {project.id !== 2 ? <SeparatorComponent /> : null}
           </>
         );

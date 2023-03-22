@@ -1,8 +1,8 @@
-import "./job.styles.jsx";
+import "./Job.styles.jsx";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
-import Styles from "./job.styles";
+import Styles from "./Job.styles";
 
 export default function JobComponent(props) {
   useEffect(() => {
@@ -10,7 +10,7 @@ export default function JobComponent(props) {
   }, []);
 
   return (
-    <section data-aos="fade-up">
+    <section key={props.job.id} data-aos="fade-up">
       <Styles.Header>
         <div>
           <Styles.Role>{props.job.role}</Styles.Role>

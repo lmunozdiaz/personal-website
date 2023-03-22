@@ -1,9 +1,9 @@
-import Styles from "./project.styles";
-import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import AOS from "aos";
+import Styles from "./Project.styles";
 
-export default function ProjectComponent(props) {
+export default function Project(props) {
   useEffect(() => {
     AOS.init();
   }, []);

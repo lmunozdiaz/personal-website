@@ -1,6 +1,6 @@
-import EducationEntry from "./school/school.component";
+import School from "./School/School";
 
-export default function SchoolListComponent() {
+export default function SchoolList() {
   const data = [
     {
       id: 1,
@@ -36,7 +36,7 @@ export default function SchoolListComponent() {
       {data.map((data) => {
         return (
           <>
-            <EducationEntry educationData={data} />
+            <School educationData={data} />
             {data.id !== 3 ? <br></br> : null}
           </>
         );

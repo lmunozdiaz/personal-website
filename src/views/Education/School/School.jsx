@@ -1,9 +1,9 @@
-import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
-import Styles from "./school.styles";
+import AOS from "aos";
+import Styles from "./School.styles";
 
-export default function SchoolComponent(props) {
+export default function School(props) {
   useEffect(() => {
     AOS.init();
   }, []);

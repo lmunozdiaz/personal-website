@@ -1,34 +1,34 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./reset.css";
 import "./index.css";
-import Root from "./pages/root";
-import SkillCategoryListComponent from "./pages/skills/skill-category-list.component";
-import ProjectListComponent from "./pages/projects/project-list.component";
-import SchoolListComponent from "./pages/education/school-list.component";
-import JobListComponent from "./pages/work-history/job-list.component";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import App from "./App";
+import SchoolList from "./views/Education/SchoolList";
+import ProjectList from "./views/Projects/ProjectList";
+import SkillList from "./views/Skills/SkillList";
+import JobList from "./views/WorkHistory/JobList";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Root />,
+    element: <App />,
     children: [
       {
         path: "skills",
-        element: <SkillCategoryListComponent />,
+        element: <SkillList />,
       },
       {
         path: "projects",
-        element: <ProjectListComponent />,
+        element: <ProjectList />,
       },
       {
         path: "work-history",
-        element: <JobListComponent />,
+        element: <JobList />,
       },
       {
         path: "education",
-        element: <SchoolListComponent />,
+        element: <SchoolList />,
       },
     ],
   },

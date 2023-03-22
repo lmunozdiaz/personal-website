@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 
 const LeftContainer = styled.div`
   position: fixed;
-  width: 35%;
+  width: 50%;
 `;
 
 const RightContainer = styled.div`
-  margin-left: 35%;
+  margin-left: 50%;
   padding: 2rem 6rem 4rem 6rem;
 `;
 

@@ -1,7 +1,7 @@
 import profileImage from "../../assets/profile-picture.jpeg";
-import Styles from "./profile.styles";
+import Styles from "./Profile.styles";
 
-export default function ProfileComponent() {
+export default function Profile() {
   return (
     <Styles.MyProfile>
       <Styles.Header>
