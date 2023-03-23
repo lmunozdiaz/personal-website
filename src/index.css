@@ -32,7 +32,6 @@ a,
 a:active,
 a:visited {
   color: #b3b3b3;
-  font-size: 1.8rem;
   text-decoration: none;
   transition: color 0.2s;
 }

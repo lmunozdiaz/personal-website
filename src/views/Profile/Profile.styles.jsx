@@ -16,6 +16,8 @@ const Container = styled.div`
 
   @media ${device.laptop} {
     height: 100vh;
+    position: fixed;
+    width: 50%;
   }
 `;
 

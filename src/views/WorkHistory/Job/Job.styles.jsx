@@ -24,15 +24,10 @@ const DetailItem = styled.p`
   display: flex;
   font-weight: 200;
   font-size: 14px;
-
-  &.material-icons {
-    font-size: 14px;
-    margin-right: 5px;
-  }
 `;
 
 const TaskList = styled.ul`
-  margin-top: 1rem;
+  margin-top: 3rem;
 `;
 
 const TaskListItem = styled.li`

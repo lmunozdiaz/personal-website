@@ -7,6 +7,12 @@ const Container = styled.div`
   @media ${device.tablet} {
     padding: 4rem 8rem;
   }
+
+  @media ${device.laptop} {
+    margin-left: 50%;
+    padding-top: 8rem;
+    width: 50%;
+  }
 `;
 
 export default { Container };
