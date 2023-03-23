@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Styles from "./School.styles";
+import GlobalStyles from "../../../utils/styles";
 
 export default function School(props) {
   useEffect(() => {
@@ -12,8 +13,10 @@ export default function School(props) {
     <Styles.School data-aos="fade-up">
       <Styles.Header>
         <div>
-          <Styles.DegreeName>{props.educationData.degree}</Styles.DegreeName>
-          <Styles.SchoolName>{props.educationData.school}</Styles.SchoolName>
+          <GlobalStyles.Title>{props.educationData.degree}</GlobalStyles.Title>
+          <GlobalStyles.Subtitle>
+            {props.educationData.school}
+          </GlobalStyles.Subtitle>
         </div>
         <Styles.Details>
           <Styles.DetailItem>
