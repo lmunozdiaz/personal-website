@@ -6,6 +6,24 @@ export default function SchoolList() {
   const data = [
     {
       id: 1,
+      degree: "JavaScript Course",
+      school: "Mosh Hamedani",
+      startDate: "Jul 2022",
+      endDate: "Oct 2022",
+      location: "Virtual/Remote",
+      coursework: [],
+    },
+    {
+      id: 2,
+      degree: "HTML & CSS Course",
+      school: "Mosh Hamedani",
+      startDate: "May 2022",
+      endDate: "Jun 2022",
+      location: "Virtual/Remote",
+      coursework: [],
+    },
+    {
+      id: 3,
       degree: "B.S. Computer Science",
       school: "Roosevelt University",
       startDate: "Aug 2017",
@@ -14,7 +32,7 @@ export default function SchoolList() {
       coursework: [],
     },
     {
-      id: 2,
+      id: 4,
       degree: "No Degree",
       school: "DePaul University",
       startDate: "Jan 2020",
@@ -23,7 +41,7 @@ export default function SchoolList() {
       coursework: [],
     },
     {
-      id: 3,
+      id: 5,
       degree: "A.A. Psychology",
       school: "Harold Washington College",
       startDate: "Sep 2015",
@@ -40,7 +58,7 @@ export default function SchoolList() {
         return (
           <>
             <School educationData={data} />
-            {data.id !== 3 ? <br></br> : null}
+            {data.id !== 5 ? <br></br> : null}
           </>
         );
       })}
