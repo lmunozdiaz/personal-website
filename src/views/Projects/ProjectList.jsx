@@ -1,5 +1,6 @@
 import Project from "./Project/Project";
-import SeparatorComponent from "../../components/ui/separator.component";
+import GlobalStyles from "../../utils/styles";
+import Styles from "./ProjectList.styles";
 
 export default function ProjectList() {
   const projects = [
@@ -25,15 +26,16 @@ export default function ProjectList() {
     },
   ];
   return (
-    <section>
+    <Styles.Container>
+      <GlobalStyles.SectionTitle>Projects</GlobalStyles.SectionTitle>
       {projects.map((project) => {
         return (
           <>
             <Project key={project.id} project={project} />
-            {project.id !== 2 ? <SeparatorComponent /> : null}
+            {project.id !== 2 ? <GlobalStyles.Separator /> : null}
           </>
         );
       })}
-    </section>
+    </Styles.Container>
   );
 }

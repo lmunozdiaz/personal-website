@@ -1,6 +1,5 @@
 import styled from "styled-components";
-
-const JobEntry = styled.div``;
+import { device } from "../../../utils/deviceSizes";
 
 const Header = styled.div`
   display: flex;
@@ -8,18 +7,15 @@ const Header = styled.div`
   gap: 1rem;
 `;
 
-const Role = styled.h2`
-  font-size: 2.4rem;
-`;
-
-const CompanyNamy = styled.p`
-  font-style: italic;
-  text-transform: capitalize;
-`;
-
 const Details = styled.div`
   display: flex;
-  gap: 2rem;
+  flex-direction: column;
+  gap: 1rem;
+
+  @media ${device.tablet} {
+    flex-direction: row;
+    gap: 2rem;
+  }
 `;
 
 const DetailItem = styled.p`
@@ -59,12 +55,9 @@ const TaskItemDecorator = styled.span`
 `;
 
 export default {
-  CompanyNamy,
   DetailItem,
   Details,
   Header,
-  JobEntry,
-  Role,
   TaskItem,
   TaskItemDecorator,
   TaskList,

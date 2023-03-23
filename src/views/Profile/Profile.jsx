@@ -3,10 +3,10 @@ import Styles from "./Profile.styles";
 
 export default function Profile() {
   return (
-    <Styles.MyProfile>
+    <Styles.Container>
       <Styles.Header>
         <p>Luis Munoz Diaz</p>
-        <span className="material-icons profile__icon">light_mode</span>
+        <span className="material-icons">light_mode</span>
       </Styles.Header>
       <section>
         <Styles.Greeting>
@@ -44,6 +44,6 @@ export default function Profile() {
           </a>
         </Styles.Socials>
       </Styles.Footer>
-    </Styles.MyProfile>
+    </Styles.Container>
   );
 }

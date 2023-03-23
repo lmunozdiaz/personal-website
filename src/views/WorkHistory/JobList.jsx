@@ -1,5 +1,6 @@
 import Job from "./Job/Job";
-import SeparatorComponent from "../../components/ui/separator.component";
+import GlobalStyles from "../../utils/styles";
+import Styles from "./JobList.styles";
 
 export default function JobList() {
   const data = [
@@ -104,15 +105,16 @@ export default function JobList() {
   ];
 
   return (
-    <section>
+    <Styles.Container>
+      <GlobalStyles.SectionTitle>Work History</GlobalStyles.SectionTitle>
       {data.map((job) => {
         return (
           <>
             <Job job={job} />
-            {job.id !== 3 ? <SeparatorComponent /> : null}
+            {job.id !== 3 ? <GlobalStyles.Separator /> : null}
           </>
         );
       })}
-    </section>
+    </Styles.Container>
   );
 }

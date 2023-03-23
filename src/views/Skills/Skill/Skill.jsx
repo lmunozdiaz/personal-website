@@ -9,11 +9,11 @@ export default function Skill(props) {
   }, []);
 
   return (
-    <Styles.Skill data-aos="fade-up">
+    <Styles.Container data-aos="fade-up">
       <Styles.Icon>
         <span className="material-icons">{props.skill.icon}</span>
       </Styles.Icon>
       <Styles.Name>{props.skill.name}</Styles.Name>
-    </Styles.Skill>
+    </Styles.Container>
   );
 }

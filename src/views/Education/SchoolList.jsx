@@ -1,4 +1,6 @@
 import School from "./School/School";
+import GlobalStyles from "../../utils/styles";
+import Styles from "./SchoolList.styles";
 
 export default function SchoolList() {
   const data = [
@@ -32,7 +34,8 @@ export default function SchoolList() {
   ];
 
   return (
-    <section>
+    <Styles.Container>
+      <GlobalStyles.SectionTitle>Education</GlobalStyles.SectionTitle>
       {data.map((data) => {
         return (
           <>
@@ -41,6 +44,6 @@ export default function SchoolList() {
           </>
         );
       })}
-    </section>
+    </Styles.Container>
   );
 }

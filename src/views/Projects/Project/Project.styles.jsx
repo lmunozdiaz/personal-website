@@ -1,12 +1,6 @@
 import styled from "styled-components";
 
-const Project = styled.div`
-  display: flex;
-  gap: 3rem;
-  align-items: center;
-`;
-
-const Details = styled.div`
+const Container = styled.div`
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -14,11 +8,6 @@ const Details = styled.div`
 `;
 
 const Header = styled.div``;
-
-const Title = styled.h2`
-  text-transform: capitalize;
-  font-size: 2.4rem;
-`;
 
 const Tags = styled.div`
   display: flex;
@@ -70,12 +59,9 @@ const ImagePlaceholder = styled.span`
 export default {
   ButtonLink,
   Buttons,
+  Container,
   Description,
-  Details,
   Header,
-  ImagePlaceholder,
-  Project,
   Tag,
   Tags,
-  Title,
 };

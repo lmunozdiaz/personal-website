@@ -1,12 +1,16 @@
 import styled from "styled-components";
+import { device } from "../../../utils/deviceSizes";
 
-const Skill = styled.div`
+const Container = styled.div`
   background-color: #1a1a1a;
   border-radius: 1.5rem;
-  padding: 4rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  padding: 2rem;
+  align-items: flex-start;
+
+  @media ${device.tablet} {
+  }
 `;
 
 const Icon = styled.span`
@@ -18,13 +22,12 @@ const Icon = styled.span`
   margin-bottom: 1rem;
 `;
 
-const Name = styled.h2`
-  font-size: 2.4rem;
+const Name = styled.p`
   text-transform: capitalize;
 `;
 
 export default {
+  Container,
   Icon,
   Name,
-  Skill,
 };

@@ -1,9 +1,10 @@
 import styled from "styled-components";
+import { device } from "../../../utils/deviceSizes.js";
 
 const School = styled.div`
   background-color: #1a1a1a;
-  padding: 3rem;
   border-radius: 1.5rem;
+  padding: 3rem;
 `;
 
 const Header = styled.div`
@@ -23,7 +24,13 @@ const SchoolName = styled.p`
 
 const Details = styled.div`
   display: flex;
-  gap: 2rem;
+  flex-direction: column;
+  gap: 1rem;
+
+  @media ${device.tablet} {
+    flex-direction: row;
+    gap: 2rem;
+  }
 `;
 
 const DetailItem = styled.p`
@@ -42,8 +49,3 @@ export default {
   School,
   SchoolName,
 };
-
-// .edu-entry__detail .material-icons {
-//   font-size: 14px;
-//   margin-right: 5px;
-// }
