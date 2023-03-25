@@ -9,7 +9,7 @@ export default function SchoolList() {
       degree: "JavaScript Course",
       school: "Mosh Hamedani",
       startDate: "Jul 2022",
-      endDate: "Oct 2022",
+      endDate: "Sep 2022",
       location: "Virtual/Remote",
       coursework: [],
     },
